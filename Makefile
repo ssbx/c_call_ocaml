@@ -25,4 +25,4 @@ libmymod.a: mymod_wrapper.o mymod_opt.o
 	ar r libmymod.a mymod_opt.o mymod_wrapper.o
 
 exemple: exemple.c libmymod.a
-	cc -o exemple -I $(OCAML_LIBS) exemple.c libmymod.a -ldl -lm
+	cc -o exemple -I $(OCAML_LIBS) exemple.c libmymod.a -ldl -lm -lpthread
